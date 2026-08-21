@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Admin Panel - Arjun Plumbing Mart</title>
+
+  <!-- ADMIN CSS -->
+  <link
+    rel="stylesheet"
+    href="admin.css"
+  >
+
+  <!-- GOOGLE FONT -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- FONT AWESOME -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     BACKGROUND EFFECT
+===================================================== -->
+
+<div class="bg-shape shape-one"></div>
+<div class="bg-shape shape-two"></div>
+
+
+
+<!-- =====================================================
+     MAIN ADMIN CONTAINER
+===================================================== -->
+
+<div class="admin-container">
+
+
+  <!-- ===================================================
+       HEADER
+  ==================================================== -->
+
+  <header class="admin-header">
+
+
+    <!-- BACK BUTTON -->
+
+    <a
+      href="index.html"
+      class="back-btn"
+      aria-label="Back to Home"
+    >
+
+      <i class="fas fa-arrow-left"></i>
+
+    </a>
+
+
+
+    <!-- HEADER CONTENT -->
+
+    <div class="header-content">
+
+      <span class="header-badge">
+
+        <i class="fas fa-shield-halved"></i>
+
+        ADMIN PANEL
+
+      </span>
+
+
+      <h1>
+        Product Manager
+      </h1>
+
+
+      <p data-shop-name>
+        Arjun Plumbing Mart
+      </p>
+
+    </div>
+
+
+
+    <!-- HEADER ICON -->
+
+    <div class="header-icon">
+
+      <i class="fas fa-sliders"></i>
+
+    </div>
+
+
+  </header>
+
+
+
+
+
+  <!-- ===================================================
+       PART 1
+       ADD PRODUCT
+  ==================================================== -->
+
+  <section class="admin-card add-card">
+
+
+    <!-- CARD HEADING -->
+
+    <div class="card-heading">
+
+      <div class="heading-icon">
+
+        <i class="fas fa-box-open"></i>
+
+      </div>
+
+
+      <div>
+
+        <h2>
+          Add Product
+        </h2>
+
+        <p>
+          Category aur product details add karein
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         ADD PRODUCT FORM
+    ================================================== -->
+
+    <form id="addProductForm">
+
+
+      <!-- ===============================================
+           1. CATEGORY
+      ================================================ -->
+
+      <div class="form-group">
+
+
+        <label>
+
+          <i class="fas fa-layer-group"></i>
+
+          Category
+
+        </label>
+
+
+
+        <!-- CUSTOM CATEGORY SELECT -->
+
+        <div
+          class="custom-select"
+          id="categorySelect"
+        >
+
+
+          <button
+            type="button"
+            class="select-btn"
+            id="categorySelectBtn"
+          >
+
+            <span id="selectedCategory">
+              Select Category
+            </span>
+
+            <i class="fas fa-chevron-down"></i>
+
+          </button>
+
+
+
+          <!-- CATEGORY OPTIONS
+               JS yahan categories dalega -->
+
+          <div
+            class="select-options"
+            id="categoryOptions"
+          >
+
+            <!--
+              Example:
+
+              <div class="select-option">
+                PVC
+              </div>
+
+              <div class="select-option">
+                CPVC
+              </div>
+
+              <div class="select-option">
+                Sanitary
+              </div>
+            -->
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <!-- ===============================================
+           2. NEW CATEGORY
+      ================================================ -->
+
+      <div class="new-category-box">
+
+
+        <div class="new-category-title">
+
+          <i class="fas fa-folder-plus"></i>
+
+          New Category
+
+        </div>
+
+
+        <p>
+          Agar nayi category banani hai to
+          neeche category ka naam likhein.
+        </p>
+
+
+        <input
+          type="text"
+          id="newCategoryName"
+          placeholder="Example: Kitchen Fittings"
+          autocomplete="off"
+        >
+
+
+      </div>
+
+
+
+
+
+      <!-- ===============================================
+           3. PRODUCT NAME
+      ================================================ -->
+
+      <div class="form-group">
+
+
+        <label>
+
+          <i class="fas fa-box"></i>
+
+          Product Name
+
+        </label>
+
+
+        <input
+          type="text"
+          id="productName"
+          placeholder="Example: Bib Cock Tap"
+          autocomplete="off"
+          required
+        >
+
+
+      </div>
+
+
+
+
+
+      <!-- ===============================================
+           4. PRODUCT SIZES
+      ================================================ -->
+
+      <div class="form-group">
+
+
+        <div class="label-row">
+
+
+          <label>
+
+            <i class="fas fa-ruler-combined"></i>
+
+            Product Sizes
+
+          </label>
+
+
+          <span
+            class="size-count"
+            id="sizeCount"
+          >
+            1 Size
+          </span>
+
+
+        </div>
+
+
+
+        <!-- SIZE CONTAINER -->
+
+        <div id="sizeContainer">
+
+
+          <!-- FIRST SIZE -->
+
+          <div class="size-row">
+
+
+            <div class="size-number">
+              1
+            </div>
+
+
+            <input
+              type="text"
+              class="size-input"
+              placeholder="Example: 1/2 inch"
+              autocomplete="off"
+            >
+
+
+            <button
+              type="button"
+              class="remove-size"
+              title="Remove Size"
+            >
+
+              <i class="fas fa-trash"></i>
+
+            </button>
+
+
+          </div>
+
+
+        </div>
+
+
+
+        <!-- ADD SIZE -->
+
+        <button
+          type="button"
+          id="addSizeBtn"
+          class="add-size-btn"
+        >
+
+          <i class="fas fa-plus"></i>
+
+          Add Another Size
+
+        </button>
+
+
+      </div>
+
+
+
+
+
+      <!-- ===============================================
+           ADD PRODUCT BUTTON
+      ================================================ -->
+
+      <button
+        type="submit"
+        class="submit-btn"
+      >
+
+        <span>
+
+          <i class="fas fa-plus-circle"></i>
+
+          Add Product
+
+        </span>
+
+
+        <i class="fas fa-arrow-right"></i>
+
+      </button>
+
+
+    </form>
+
+
+  </section>
+
+
+
+
+
+  <!-- ===================================================
+       PART 2
+       DELETE / MANAGE PRODUCTS
+  ==================================================== -->
+
+  <section class="admin-card product-card">
+
+
+    <!-- CARD HEADING -->
+
+    <div class="card-heading">
+
+
+      <div class="heading-icon">
+
+        <i class="fas fa-boxes-stacked"></i>
+
+      </div>
+
+
+      <div>
+
+        <h2>
+          Delete Product
+        </h2>
+
+        <p>
+          Product search karein aur manage karein
+        </p>
+
+      </div>
+
+
+      <!-- PRODUCT COUNT -->
+
+      <div
+        class="product-count"
+        id="productCount"
+      >
+        0
+      </div>
+
+
+    </div>
+
+
+
+
+
+    <!-- ===============================================
+         PRODUCT SEARCH
+    ================================================ -->
+
+    <div class="search-box">
+
+
+      <i class="fas fa-search"></i>
+
+
+      <input
+        type="text"
+        id="deleteSearch"
+        placeholder="Product search karein..."
+        autocomplete="off"
+      >
+
+
+      <button
+        type="button"
+        id="clearSearch"
+        class="clear-search"
+        aria-label="Clear Search"
+      >
+
+        <i class="fas fa-times"></i>
+
+      </button>
+
+
+    </div>
+
+
+
+
+
+    <!-- ===============================================
+         GLOBAL SHOW / HIDE
+    ================================================ -->
+
+    <div class="product-visibility-control">
+
+
+      <div class="visibility-info">
+
+        <div class="visibility-icon">
+
+          <i class="fas fa-eye"></i>
+
+        </div>
+
+
+        <div>
+
+          <strong>
+            Product Visibility
+          </strong>
+
+          <span>
+            Sabhi products ko ek saath Show ya Hide karein
+          </span>
+
+        </div>
+
+      </div>
+
+
+
+      <!--
+        JS is button ka text
+        SHOW ALL / HIDE ALL
+        ke according change karega
+      -->
+
+      <button
+        type="button"
+        id="toggleAllProducts"
+        class="toggle-all-btn"
+      >
+
+        <i class="fas fa-eye"></i>
+
+        Hide All
+
+      </button>
+
+
+    </div>
+
+
+
+
+
+    <!-- ===============================================
+         PRODUCT PREVIEW TITLE
+    ================================================ -->
+
+    <div class="preview-heading">
+
+
+      <div>
+
+        <h3>
+          Product Preview
+        </h3>
+
+        <p>
+          Index page par products kaise dikh rahe hain
+        </p>
+
+      </div>
+
+
+      <span
+        id="visibleProductCount"
+        class="visible-count"
+      >
+        0 Visible
+      </span>
+
+
+    </div>
+
+
+
+
+
+    <!-- ===============================================
+         PRODUCT PREVIEW
+    ================================================ -->
+
+    <div
+      id="deletePreview"
+      class="delete-preview"
+    >
+
+      <!--
+        JavaScript yahan index ke
+        products render karega.
+
+        Example structure:
+
+        <div class="admin-product-item">
+
+          Product Name
+          Category
+          Sizes
+
+        </div>
+      -->
+
+    </div>
+
+
+  </section>
+
+
+<!-- ===================================================
+     PART 3
+     DELETE CATEGORY
+==================================================== -->
+
+<section class="admin-card category-delete-card">
+
+  <!-- CARD HEADING -->
+
+  <div class="card-heading">
+
+    <div class="heading-icon category-delete-icon">
+
+      <i class="fas fa-folder-minus"></i>
+
+    </div>
+
+    <div>
+
+      <h2>
+        Delete Category
+      </h2>
+
+      <p>
+        Category delete karein aur uske products bhi remove karein
+      </p>
+
+    </div>
+
+    <!-- CATEGORY COUNT -->
+
+    <div
+      class="product-count"
+      id="categoryCount"
+    >
+      0
+    </div>
+
+  </div>
+
+
+  <!-- WARNING -->
+
+  <div class="category-delete-warning">
+
+    <div class="warning-icon">
+
+      <i class="fas fa-triangle-exclamation"></i>
+
+    </div>
+
+    <div>
+
+      <strong>
+        Important Warning
+      </strong>
+
+      <span>
+        Category delete karne par us category ke
+        <b>sabhi products bhi delete</b> ho jayenge.
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <!-- CATEGORY SEARCH -->
+
+  <div class="search-box category-search-box">
+
+    <i class="fas fa-search"></i>
+
+    <input
+      type="text"
+      id="categoryDeleteSearch"
+      placeholder="Category search karein..."
+      autocomplete="off"
+    >
+
+    <button
+      type="button"
+      id="clearCategorySearch"
+      class="clear-search"
+      aria-label="Clear Category Search"
+    >
+
+      <i class="fas fa-times"></i>
+
+    </button>
+
+  </div>
+
+
+  <!-- CATEGORY PREVIEW TITLE -->
+
+  <div class="preview-heading">
+
+    <div>
+
+      <h3>
+        Category List
+      </h3>
+
+      <p>
+        Delete karne ke liye category select karein
+      </p>
+
+    </div>
+
+    <span
+      id="categoryProductCount"
+      class="visible-count"
+    >
+      0 Categories
+    </span>
+
+  </div>
+
+
+  <!-- CATEGORY LIST -->
+
+  <div
+    id="categoryDeletePreview"
+    class="category-delete-preview"
+  >
+
+    <!-- JavaScript yahan categories render karega -->
+
+  </div>
+
+</section>
+
+
+  <!-- ===================================================
+       FOOTER
+  ==================================================== -->
+
+  <div class="admin-footer">
+
+    <i class="fas fa-lock"></i>
+
+    Admin Panel • Product data Local Storage mein save hota hai
+
+  </div>
+
+
+</div>
+
+
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<!-- SITE SETTINGS -->
+
+<script src="SiteSettings.js"></script>
+
+
+<!-- DEFAULT PRODUCTS -->
+
+<script src="Product.js"></script>
+
+
+<!-- ADMIN LOGIC -->
+
+<script src="Admin.js"></script>
+
+
+</body>
+
+</html>

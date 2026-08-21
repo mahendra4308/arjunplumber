@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Arjun Plumbing Mart</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+:root{
+  --primary:#8B0D3A;
+  --secondary:#e7c79f;
+}
+
+body{
+  background:#f8eef1;
+  color:#333;
+}
+
+.header{
+  background:var(--primary);
+  color:#fff;
+  padding:16px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
+}
+
+.back-btn{
+  width:42px;
+  height:42px;
+  border:none;
+  border-radius:12px;
+  background:rgba(255,255,255,.15);
+  color:#fff;
+  font-size:18px;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.back-btn:hover{
+  background:rgba(255,255,255,.25);
+}
+
+.header h2{
+  font-size:20px;
+  font-weight:600;
+}
+
+.container{
+  max-width:850px;
+  margin:20px auto;
+  padding:0 16px;
+}
+
+.card{
+  background:#fff;
+  border-radius:20px;
+  padding:24px;
+  box-shadow:0 8px 24px rgba(139,13,58,.08);
+  margin-bottom:20px;
+}
+
+.logo-box{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.logo-box img{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid var(--secondary);
+  background:#fff;
+}
+
+.logo-box h1{
+  color:var(--primary);
+  margin-top:14px;
+  font-size:28px;
+}
+
+.logo-box p{
+  color:#7a5563;
+  margin-top:6px;
+}
+
+.card h3{
+  color:var(--primary);
+  margin-bottom:14px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.card p{
+  line-height:1.9;
+  color:#555;
+  margin-bottom:14px;
+}
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:14px;
+  margin-top:18px;
+}
+
+.feature{
+  background:#fff7f9;
+  border:1px solid #f0d6df;
+  border-radius:16px;
+  padding:18px;
+}
+
+.feature i{
+  font-size:26px;
+  color:var(--primary);
+  margin-bottom:10px;
+}
+
+.feature h4{
+  color:#5b2436;
+  margin-bottom:6px;
+}
+
+.contact{
+  background:var(--primary);
+  color:#fff;
+  border-radius:20px;
+  padding:24px;
+  text-align:center;
+}
+
+.contact h3{
+  color:#fff;
+  justify-content:center;
+}
+
+.contact a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.footer{
+  text-align:center;
+  padding:24px;
+  color:var(--primary);
+  font-weight:600;
+}
+
+@media(max-width:768px){
+  .logo-box h1{
+    font-size:24px;
+  }
+
+  .card{
+    padding:20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <button class="back-btn" onclick="history.back()">
+    <i class="fas fa-arrow-left"></i>
+  </button>
+  <h2>About Us</h2>
+</div>
+
+<div class="container">
+
+  <div class="card">
+
+    <div class="logo-box">
+      <img src="logo.png" data-logo alt="Logo">
+
+      <h1 data-shop-name>Arjun Plumbing Mart</h1>
+
+      <p data-tagline>
+        Plumbing Product Catalogue & WhatsApp Order List
+      </p>
+    </div>
+
+    <h3>
+      <i class="fas fa-circle-info"></i>
+      About Us
+    </h3>
+
+    <p>
+      Welcome to
+      <strong data-shop-name>Arjun Plumbing Mart</strong>.
+      This website is designed especially for plumbers,
+      contractors, and customers who want to quickly prepare
+      a plumbing material list.
+    </p>
+
+    <p>
+      The main purpose of this website is to make product
+      selection easy. You can browse plumbing products,
+      choose the required size and quantity,
+      and send the complete order list directly through WhatsApp.
+    </p>
+
+    <p>
+      This website is not only a product catalogue but also
+      a simple tool for preparing material lists for plumbing work.
+    </p>
+
+  </div>
+    <div class="card">
+
+    <h3>
+      <i class="fas fa-wrench"></i>
+      What You Can Do
+    </h3>
+
+    <div class="features">
+
+      <div class="feature">
+        <i class="fas fa-box-open"></i>
+        <h4>View Products</h4>
+        <p>Browse plumbing products category-wise.</p>
+      </div>
+
+      <div class="feature">
+        <i class="fas fa-ruler-combined"></i>
+        <h4>Select Size</h4>
+        <p>Choose the required product size easily.</p>
+      </div>
+
+      <div class="feature">
+        <i class="fas fa-list-check"></i>
+        <h4>Create Material List</h4>
+        <p>Select products and prepare a complete order list.</p>
+      </div>
+
+      <div class="feature">
+        <i class="fab fa-whatsapp"></i>
+        <h4>Send on WhatsApp</h4>
+        <p>Send the selected material list directly through WhatsApp.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="card">
+
+    <h3>
+      <i class="fas fa-language"></i>
+      हमारे बारे में
+    </h3>
+
+    <p>
+      <strong data-shop-name>Arjun Plumbing Mart</strong>
+      में आपका स्वागत है। यह वेबसाइट विशेष रूप से प्लंबर,
+      कॉन्ट्रैक्टर और ग्राहकों के लिए बनाई गई है,
+      ताकि प्लंबिंग के सामान की सूची आसानी से तैयार की जा सके।
+    </p>
+
+    <p>
+      इस वेबसाइट का मुख्य उद्देश्य प्रोडक्ट चुनना आसान बनाना है।
+      आप प्लंबिंग के सामान को देख सकते हैं,
+      आवश्यक साइज और मात्रा चुन सकते हैं,
+      और पूरी ऑर्डर लिस्ट सीधे WhatsApp पर भेज सकते हैं।
+    </p>
+
+    <p>
+      यह वेबसाइट केवल प्रोडक्ट देखने के लिए नहीं,
+      बल्कि प्लंबिंग कार्य के लिए सही और पूरी सामग्री सूची
+      तैयार करने के लिए बनाई गई है।
+    </p>
+
+  </div>
+
+  <div class="contact">
+
+    <h3>
+      <i class="fas fa-phone"></i>
+      Contact Us
+    </h3>
+
+    <p>
+      <strong data-shop-name>Arjun Plumbing Mart</strong>
+    </p>
+
+    <p>
+      Phone:
+      <a data-call-link href="tel:9005009036">
+        <span data-mobile>9005009036</span>
+      </a>
+    </p>
+
+    <p>
+      WhatsApp:
+      <a data-whatsapp href="https://wa.me/919005009036">
+        <span data-mobile>9005009036</span>
+      </a>
+    </p>
+
+  </div>
+
+</div>
+
+<div class="footer">
+  Thank you for using
+  <span data-shop-name>Arjun Plumbing Mart</span>
+</div>
+
+<script>
+const cards = document.querySelectorAll('.card');
+
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.style.opacity = "1";
+      entry.target.style.transform = "translateY(0)";
+    }
+  });
+},{threshold:0.1});
+
+cards.forEach(card=>{
+  card.style.opacity = "0";
+  card.style.transform = "translateY(20px)";
+  card.style.transition = "0.5s ease";
+  observer.observe(card);
+});
+</script>
+
+<!-- Site settings apply -->
+<script src="SiteSettings.js"></script>
+
+</body>
+</html>
