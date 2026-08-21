@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arjun Plumbing Mart</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+<!-- ========================================
+     LEFT SLIDE MENU
+======================================== -->
+<div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+
+<aside class="side-menu" id="sideMenu">
+  <!-- MENU HEADER -->
+  <div class="menu-header">
+    <div class="menu-logo">
+      <img src="logo.png" alt="Logo" data-logo>
+    </div>
+    <div class="menu-title">
+      <h3 data-shop-name>Arjun Plumbing Mart</h3>
+      <p>Premium Plumbing Store</p>
+    </div>
+    <button class="menu-close" onclick="closeMenu()">&times;</button>
+  </div>
+
+  <!-- MENU LIST -->
+  <nav class="menu-list">
+    <a href="#">
+      <i class="fas fa-house"></i>
+      Home
+    </a>
+    <a href="Admin.html">
+      <i class="fas fa-box-open"></i>
+      Add Products
+    </a>
+    
+    <a href="https://wa.me/919005009036" data-whatsapp>
+      <i class="fab fa-whatsapp"></i>
+      WhatsApp
+    </a>
+    <a href="About_us.html">
+      <i class="fas fa-circle-info"></i>
+      About Us
+    </a>
+    <a href="Settings.html">
+      <i class="fas fa-cog"></i>
+      Settings
+    </a>
+  </nav>
+</aside>
+
+<!-- ========================================
+     TOP HEADER
+======================================== -->
+<header class="top-header">
+  <button class="menu-btn" onclick="openMenu()">
+    <i class="fas fa-bars"></i>
+  </button>
+  <div class="tagline">
+    <h3 data-tagline>हर फिटिंग सही रेट पर, सीधा ऑर्डर</h3>
+    <div class="line"></div>
+  </div>
+  <a href="tel:9005009036" class="call-btn" data-call-link>
+    <i class="fas fa-phone-alt"></i>
+    <span data-mobile>9005009036</span>
+  </a>
+</header>
+
+<!-- ========================================
+     HERO BANNER
+======================================== -->
+<section class="hero-banner">
+  <div class="banner-inner">
+    <div class="logo-wrap">
+      <img src="logo.png" alt="Arjun Plumbing Mart" class="hero-logo" data-logo>
+    </div>
+    <div class="banner-text">
+      <h1 data-shop-name>Arjun Plumbing Mart</h1>
+      <div class="gold-divider">
+        <span></span>
+        <i class="fas fa-wrench"></i>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================
+     SEARCH BAR
+======================================== -->
+<section class="search-section">
+  <div class="search-box">
+    <i class="fas fa-search"></i>
+    <input id="searchInput" type="text" placeholder="Product search karein...">
+  </div>
+</section>
+
+<!-- ========================================
+     CATEGORY SECTION
+======================================== -->
+<div class="category-wrapper">
+  <!-- FIRST LINE -->
+  <div class="category-bar">
+    <button class="category-card">PVC</button>
+    <button class="category-card">CPVC</button>
+    <button class="category-card">Sanitary</button>
+    <button class="all-category-btn" onclick="openCategoryMenu()">
+      All Categories
+    </button>
+  </div>
+</div>
+
+<!-- ========================================
+     CATEGORY OVERLAY
+======================================== -->
+<div class="category-overlay" id="categoryOverlay" onclick="closeCategoryMenu()"></div>
+
+<!-- ========================================
+     RIGHT CATEGORY SIDEBAR - DYNAMIC
+======================================== -->
+<div class="category-sidebar" id="categorySidebar">
+  <!-- SIDEBAR HEADER -->
+  <div class="sidebar-header">
+    <h3>All Categories</h3>
+    <button class="close-btn" onclick="closeCategoryMenu()">&times;</button>
+  </div>
+
+  <!-- SIDEBAR LIST - DYNAMIC -->
+  <div class="sidebar-list" id="sidebarList">
+    <!-- Categories yahan JavaScript se generate hongi -->
+  </div>
+</div>
+
+<!-- ========================================
+     PRODUCT HEADER
+======================================== -->
+<div class="product-header">
+  <div class="ph-product">PRODUCT</div>
+  <div class="ph-size">SIZE</div>
+  <div class="ph-qty">QTY</div>
+  <div class="ph-add">ADD</div>
+</div>
+
+<!-- ========================================
+     PRODUCT LIST
+======================================== -->
+<section class="product-list-section">
+  <div id="productList"></div>
+</section>
+
+<!-- ========================================
+     WHATSAPP BUTTON
+======================================== -->
+<div class="whatsapp-send">
+  <button id="sendWhatsappBtn" class="send-whatsapp-btn">
+    <i class="fab fa-whatsapp"></i>
+    Send on WhatsApp (0)
+  </button>
+</div>
+
+<script src="Product.js"></script>
+<script src="SiteSettings.js"></script>
+<script src="Script.js"></script>
+
+</body>
+</html>
